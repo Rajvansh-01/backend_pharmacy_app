@@ -1,0 +1,60 @@
+create a .env file to make these variable
+PORT 
+MONGODB_URI
+JWT_SECRET_KEY
+YOUR_API_KEY
+
+
+Documentation
+App.js:
+    Requiring all packages we needed
+    initializing app
+    setting up database Connection
+    setting up api's to use routes for further processes
+    establishing socket.io connection
+    setting up api to send mail that includes copy of users answer to the owner
+
+Routes:
+    containing all user routes that are required for this project for login and signup, getting messages.
+    the user wil be redirected to those routes depending upon his action and accordingly the controllers will be used
+
+Models:
+    Having 4 models:
+        Form.js: modelfor storing the data of the form filled by user regarding medicines
+        Message.js: model for storing users messages
+        OtpModel.js: to store otp and number info that signed-up using otp
+        User.js: User model to store info of user that signup though email-password
+        UserModelOTP.js: User model to store info of user that signup though otp
+
+Middleware:
+    using auth while logging in a user or signing up
+
+User Controller:
+    have all the functions to carry out process to handle user action
+    userController:
+        functions:
+            user-registration
+            user signup using OTP
+            verify otp
+            user-login
+            change user password
+            reset-user password and send email to user
+            get all user 
+    messageController:
+        functions:
+            to add messages
+            to get messages
+
+config:
+    connectdb:
+        used to establish mongodb connection 
+    emailConfig:
+        sending reset password email to user
+    sendMail:
+        sending the owner a copy of user's form data
+
+
+clientScript.js:
+    To be included in React.js folder for videocall functionality and streaming user's video 
+
+
